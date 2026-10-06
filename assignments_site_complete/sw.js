@@ -1,0 +1,1 @@
+const CACHE='assignments-v1';self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['index.html','section1.html','section2.html','section3.html','profile.html','style.css','manifest.json']))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
